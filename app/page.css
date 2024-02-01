@@ -1,24 +1,29 @@
-html {
+body {
+  margin: 0;
   background-color: rgb(36, 39, 54);
 }
 
 header {
-  background-color: rgb(71, 79, 122);
-  padding: 2vmin;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
-hr {
-  color: rgb(34, 3, 157);
+.line {
+  box-shadow: 0px 5px 18px 4px rgba(255, 208, 236, 0.771);
+  max-width: 100%;
+  margin: 0;
+  display: flex;
 }
 
-.headerIcon {
-  width: 5vmin;
-  height: 5vmin;
-  margin-right: 1vmin;
+.homeCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .space {
-  margin-bottom: 20vmin;
+  margin-bottom: 8vmin;
+  margin-top: 8vmin;
+  display: flex;
+  justify-content: center;
 }

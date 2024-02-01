@@ -1,5 +1,5 @@
 
-export function CharacterCards(character) {
+export function CharacterCards({character}) {
     let statusIcon = ""
 
     if (character.status == "Alive") {

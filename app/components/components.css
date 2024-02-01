@@ -1,0 +1,97 @@
+.homeCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .characterCard {
+    width: 50vmin;
+    height: 20vmin;
+    margin: 2vmin;
+    border-radius: 2vmin;
+    border: 0.2vmin solid rgb(129, 104, 157);
+    background-color: rgb(52, 52, 76);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color: rgb(243, 220, 254);
+    transition: 0.3s;
+    padding: 2vmin;
+    display: flex;
+    align-items: center;
+  }
+  
+  .characterCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    background-color: rgba(44, 44, 63, 0.618);
+  }
+  
+  .container {
+    padding-left: 3vmin;
+    padding-right: 2vmin;
+  }
+
+  .characterName {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .section1 {
+    padding-top: 1vmin;
+    margin-bottom: 4vmin;
+  }
+
+  .section2 {
+    margin-bottom: 2vmin;
+  }
+
+  .originName {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .statusSpeciesSpan, .originSpan {
+    font-size: 2vmin;
+  }
+
+  .originSpan {
+    color: rgb(161, 141, 165);
+  }
+
+  .containerImage {
+    display: flex;
+  }
+
+  .characterImage {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 2vmin;
+    margin: 0;
+  }
+
+.alive {
+  height: 1vmin;
+  width: 1vmin;
+  margin-right: 0.5vmin;
+  background-color: rgb(85, 204, 68);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dead {
+  height: 1vmin;
+  width: 1vmin;
+  margin-right: 0.5vmin;
+  background-color: rgb(204, 68, 68);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.unknown {
+  height: 1vmin;
+  width: 1vmin;
+  margin-right: 0.5vmin;
+  background-color: rgb(71, 71, 71);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}

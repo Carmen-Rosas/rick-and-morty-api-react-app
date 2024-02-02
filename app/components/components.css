@@ -38,6 +38,10 @@
 
 /* Search bar styles */
 
+.search {
+  display: flex;
+}
+
 .searchBar {
   width: 30vmin;
   border-radius: 3vmin;

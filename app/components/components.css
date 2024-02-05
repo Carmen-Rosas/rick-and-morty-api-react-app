@@ -208,7 +208,7 @@ input[type="search"]:focus {
 
 /* Footer style */
 
-.footerDiv {
+footer {
   height: 17vmin;
   background-color: rgba(250, 235, 215, 0.56);
   margin-top: 5vmin;

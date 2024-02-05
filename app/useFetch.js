@@ -9,5 +9,5 @@ export function useFetch(url) {
             .then((data) => setData(data));
     }, []);
 
-    return data
+    return data;
 }

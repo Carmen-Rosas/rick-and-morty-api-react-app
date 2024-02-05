@@ -5,9 +5,11 @@ import {useFetch} from "./useFetch";
 import {CharacterCards} from "./components/Cards";
 import {Header} from "./components/Header";
 import {SearchBar} from "./components/SearchBar";
+import {Footer} from "./components/Footer";
 
 export default function Home() {
-  const {data} = useFetch("https://rickandmortyapi.com/api/character");
+  const characters = useFetch("https://rickandmortyapi.com/api/character");
+  const locations = useFetch("https://rickandmortyapi.com/api/location");
 
   return (
     <>
@@ -17,12 +19,13 @@ export default function Home() {
       <SearchBar/>
     </div>
     <div className="homeCard">
-        {data?.results.map((character) => (
+        {characters?.results.map((character) => (
           <div key={character.id}>
             <CharacterCards character={character}/>
           </div>
         ))}
     </div>
+    <Footer/>
     </>
   );
 }

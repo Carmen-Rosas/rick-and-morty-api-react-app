@@ -1,14 +1,19 @@
 
 export function CharacterCards({character}) {
-    let statusIcon = ""
+    let statusIcon = "";
 
-    if (character.status == "Alive") {
-        statusIcon = "alive"
-    } else if (character.status == "Dead") {
-        statusIcon = "dead"
-    } else {
-        statusIcon = "unknown"
+    switch (character.status) {
+        case "Alive":
+            statusIcon = "alive";
+            break;
+        case "Dead":
+            statusIcon = "dead";
+            break;
+        default:
+            statusIcon = "unknown";
+            break;
     }
+
     return (
         <div className="characterCard">
             <div className="containerImage">
@@ -27,5 +32,5 @@ export function CharacterCards({character}) {
                 </div>
             </div>
         </div>
-    )
+    );
 }

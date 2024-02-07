@@ -1,6 +1,7 @@
 "use client";
 import "./page.css";
 import "./components/components.css";
+import github from "../public/github.svg"
 import { useFetch } from "./useFetch";
 import { useState, useEffect } from "react";
 import { CharacterCards, LocationCards } from "./components/Cards";

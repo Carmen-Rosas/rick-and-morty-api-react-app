@@ -27,3 +27,26 @@ header {
   display: flex;
   justify-content: center;
 }
+
+/* Next and Prev button styles */
+
+.pageButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1vmin;
+}
+
+button {
+  width: 13vmin;
+  height: 6vmin;
+  border: 0.2vmin solid rgb(129, 104, 157);
+  font-size: 2vmin;
+  color: rgba(240, 248, 255, 0.734);
+  background-color: rgb(36, 39, 54);
+  border-radius: 3vmin;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: rgb(25, 28, 44);
+}

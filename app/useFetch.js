@@ -1,13 +1,13 @@
 import {useState, useEffect} from "react";
 
-export function useFetch(currentPage) {
+export function useFetch(currentPage, charOrLocation) {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character/?page=${currentPage}`)
+        fetch(`https://rickandmortyapi.com/api/${charOrLocation}/?page=${currentPage}`)
             .then((response) => response.json())
             .then((data) => setData(data));
-    }, [currentPage]);
+    }, [currentPage, charOrLocation]);
 
     return data;
 }

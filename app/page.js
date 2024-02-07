@@ -10,15 +10,18 @@ import { Footer } from "./components/Footer";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
-  const characters = useFetch(currentPage);
+  const [charOrLocation, setCharOrLocation] = useState("character");
+
+  const data = useFetch(currentPage, charOrLocation);
+
   
   function handleClickPrev() {
-    if (characters.info.prev != null)
+    if (data.info.prev != null)
       setCurrentPage(currentPage - 1);
   };
 
   function handleClickNext() {
-    if (characters.info.next != null)
+    if (data.info.next != null)
       setCurrentPage(currentPage + 1);
   };
 
@@ -27,16 +30,19 @@ export default function Home() {
       <Header title="Rick and Morty" />
       <div className="line"></div>
       <div className="space">
-        <SearchBar />
+        <SearchBar setCharOrLocation={setCharOrLocation} />
       </div>
       <div className="homeCard">
-        {characters?.results.map((character) => (
-          <div key={character.id}>
-            <CharacterCards character={character} />
+        {data?.results.map((element) => (
+          <div key={element.id}>
+            {charOrLocation == "character" ?
+              (<CharacterCards character={element} />) :
+              (<CharacterCards character={element} />)
+            }
           </div>
         ))}
       </div>
-      <div>
+      <div className="pageButtons">
         <button onClick={handleClickPrev}>Previous</button>
         <button onClick={handleClickNext}>Next</button>
       </div>

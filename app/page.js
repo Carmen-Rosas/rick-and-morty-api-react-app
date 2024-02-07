@@ -3,7 +3,7 @@ import "./page.css";
 import "./components/components.css";
 import { useFetch } from "./useFetch";
 import { useState, useEffect } from "react";
-import { CharacterCards } from "./components/Cards";
+import { CharacterCards, LocationCards } from "./components/Cards";
 import { Header } from "./components/Header";
 import { SearchBar } from "./components/SearchBar";
 import { Footer } from "./components/Footer";
@@ -37,7 +37,7 @@ export default function Home() {
           <div key={element.id}>
             {charOrLocation == "character" ?
               (<CharacterCards character={element} />) :
-              (<CharacterCards character={element} />)
+              (<LocationCards location={element} />)
             }
           </div>
         ))}

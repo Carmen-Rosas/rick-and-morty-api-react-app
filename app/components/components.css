@@ -98,9 +98,9 @@ input[type="search"]:focus {
 }
 
 
-/* Character cards styles */
+/* Cards styles */
 
-.characterCard {
+.card {
   width: 50vmin;
   height: 20vmin;
   margin: 2vmin;
@@ -115,7 +115,7 @@ input[type="search"]:focus {
   align-items: center;
 }
 
-.characterCard:hover {
+.card:hover {
   box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
   background-color: rgba(44, 44, 63, 0.618);
 }
@@ -125,7 +125,18 @@ input[type="search"]:focus {
   padding-right: 2vmin;
 }
 
-.characterName {
+.containerImage {
+  display: flex;
+}
+
+.cardImage {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 2vmin;
+  margin: 0;
+}
+
+.elementName {
   font-size: 2.6vmin;
   margin-top: 0;
   margin-bottom: 0;
@@ -140,30 +151,18 @@ input[type="search"]:focus {
   margin-bottom: 2vmin;
 }
 
-.originName {
+span + h4 {
   font-size: 2.3vmin;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.statusSpeciesSpan,
-.originSpan {
+span {
   font-size: 2vmin;
 }
 
-.originSpan {
+div span:first-child {
   color: rgb(242, 204, 250);
-}
-
-.containerImage {
-  display: flex;
-}
-
-.characterImage {
-  width: 20vmin;
-  height: 20vmin;
-  border-radius: 2vmin;
-  margin: 0;
 }
 
 .alive {

@@ -25,9 +25,13 @@ export default function Home() {
       setCurrentPage(currentPage + 1);
   };
 
-  let pageButtons = "";
-  if (data.info.prev == null || data.info.next == null)
-    pageButtons = "notVisibleButtons";
+  let prevButton = "";
+  let nextButton = "";
+
+  if (data?.info.prev == null)
+    prevButton = "notVisibleButton";
+  if (data?.info.next == null)
+    nextButton = "notVisibleButton";
 
   return (
     <>
@@ -47,8 +51,8 @@ export default function Home() {
         ))}
       </div>
       <div className="pageButtons">
-        <button className={pageButtons} onClick={handleClickPrev}>Previous</button>
-        <button className={pageButtons} onClick={handleClickNext}>Next</button>
+        <button className={prevButton} onClick={handleClickPrev}>Previous</button>
+        <button className={nextButton} onClick={handleClickNext}>Next</button>
       </div>
       <Footer />
     </>

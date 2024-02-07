@@ -1,8 +1,8 @@
 
 export function Header({title}) {
     return (
-        <header className="homeHeader">
-            <img src="./favicon.ico" className="headerIcon"></img>
+        <header>
+            <img src="./favicon.ico" className="headerIcon" alt="rick-avatar"></img>
             <h1 className="homeTitle">{title}</h1>  
         </header>
     

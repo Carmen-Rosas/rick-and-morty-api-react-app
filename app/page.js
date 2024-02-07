@@ -54,6 +54,7 @@ export default function Home() {
         <button className={prevButton} onClick={handleClickPrev}>Previous</button>
         <button className={nextButton} onClick={handleClickNext}>Next</button>
       </div>
+      <div className="line2"></div>
       <Footer />
     </>
   );

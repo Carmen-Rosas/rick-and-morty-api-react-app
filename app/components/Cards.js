@@ -28,7 +28,7 @@ export function CharacterCards({character}) {
                 </div>
                 <div className="section2">
                     <span>Origin:</span>
-                    <h4>{character.origin.name}</h4>
+                    <h4>{character.origin?.name}</h4>
                 </div>
             </div>
         </div>
@@ -38,18 +38,21 @@ export function CharacterCards({character}) {
 export function LocationCards({location}) {
     return (
         <div className="card">
-        <div className="containerImage">
-          <img src={location.image} className="cardImage"></img>  
-        </div>
         
         <div className="container">
             <div className="section1">
                 <h3 className="elementName"><b>{location.name}</b></h3>
                 <span>{location.dimension}</span>
             </div>
-            <div className="section2">
-                <span>Type:</span>
-                <h4>{location.type}</h4>
+            <div className="section3">
+                <div className="locationType">
+                    <span>Type:</span>
+                    <h4>{location.type}</h4>
+                </div>
+                <div>
+                    <span>Residents:</span>
+                    <h4>{location.residents?.length}</h4>
+                </div>
             </div>
         </div>
     </div>

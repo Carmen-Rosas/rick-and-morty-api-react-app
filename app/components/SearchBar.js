@@ -1,21 +1,26 @@
+export function SearchBar({setCharOrLocation, setSearchName, setCurrentPage}) {
+    let input = "";
+    function handleChange(e) {
+        input = e.target.value;
+        setCurrentPage(1);
+        setSearchName(input);
+    }
 
-export function SearchBar({setCharOrLocation}) {
-    
     function activateCharButton() {
         setCharOrLocation("character");
-      }
+        setCurrentPage(1);
+    }
     
-      function activateLocButton() {
+    function activateLocButton() {
         setCharOrLocation("location");
-      }
+        setCurrentPage(1);
+    }
 
     return (
-
         <div className="search">
-            <form className="searchBar" role="search">
-                <input type="search" placeholder="Search..." autoFocus="autofocus" />
-                <button className="searchButton" type="submit">Go</button>  
-            </form>
+            <div className="searchBar">
+                <input type="search" placeholder="Search..." autoFocus="autofocus" onChange={handleChange}/>
+            </div>
             <button className="optionsButton" type="button" onClick={activateCharButton}>Character</button>
             <button className="optionsButton" type="button" onClick={activateLocButton}>Location</button>
         </div>

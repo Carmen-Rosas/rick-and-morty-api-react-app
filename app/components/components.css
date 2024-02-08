@@ -95,7 +95,8 @@ input[type="search"]:focus {
 
 /* Cards styles */
 
-.card {
+.card,
+.cardMax {
   width: 50vmin;
   height: 20vmin;
   margin: 2vmin;
@@ -198,6 +199,10 @@ div span:first-child {
   border-radius: 50%;
   display: inline-block;
   vertical-align: middle;
+}
+
+.cardMax {
+  height: 40vmin;
 }
 
 /* Footer style */

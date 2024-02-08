@@ -12,6 +12,7 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [charOrLocation, setCharOrLocation] = useState("character");
   const [searchName, setSearchName] = useState("");
+  
 
   const data = useFetch(currentPage, charOrLocation, searchName);
 

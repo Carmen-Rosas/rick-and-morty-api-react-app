@@ -1,5 +1,12 @@
+import { useState } from "react";
 
-export function CharacterCards({character}) {
+export function CharacterCards({ character }) {
+    const [clicked, setClicked] = useState(true);
+    
+    function toggleClick() {
+        setClicked(!clicked);
+    }
+    
     let statusIcon = "";
 
     switch (character.status) {
@@ -15,46 +22,69 @@ export function CharacterCards({character}) {
     }
 
     return (
-        <div className="card">
-            <div className="containerImage">
-              <img src={character.image} className="cardImage"></img>  
-            </div>
-            
-            <div className="container">
-                <div className="section1">
-                    <h3 className="elementName"><b>{character.name}</b></h3>
-                    <div className={statusIcon}></div>
-                    <span>{character.status} - {character.species}</span>  
+        <>
+            {clicked ? 
+            (<div className="card" onClick={toggleClick}>
+                <div className="containerImage">
+                    <img src={character.image} className="cardImage"></img>
                 </div>
-                <div className="section2">
-                    <span>Origin:</span>
-                    <h4>{character.origin?.name}</h4>
+
+                <div className="container">
+                    <div className="section1">
+                        <h3 className="elementName"><b>{character.name}</b></h3>
+                        <div className={statusIcon}></div>
+                        <span>{character.status} - {character.species}</span>
+                    </div>
+                    <div className="section2">
+                        <span>Origin:</span>
+                        <h4>{character.origin?.name}</h4>
+                    </div>
+                </div>
+            </div>) : 
+            <div className="cardMax" onClick={toggleClick}>
+                <div className="containerImage">
+                    <img src={character.image} className="cardImage"></img>
+                </div>
+
+                <div className="container">
+                    <div className="section1">
+                        <h3 className="elementName"><b>{character.species}</b></h3>
+                        <div className={statusIcon}></div>
+                        <span>{character.status} - {character.species}</span>
+                    </div>
+                    <div className="section2">
+                        <span>Origin:</span>
+                        <h4>{character.origin?.name}</h4>
+                    </div>
                 </div>
             </div>
-        </div>
+            }
+
+        </>
+
     );
 }
 
-export function LocationCards({location}) {
+export function LocationCards({ location }) {
     return (
         <div className="card">
-        
-        <div className="container">
-            <div className="section1">
-                <h3 className="elementName"><b>{location.name}</b></h3>
-                <span>{location.dimension}</span>
-            </div>
-            <div className="section3">
-                <div className="locationType">
-                    <span>Type:</span>
-                    <h4>{location.type}</h4>
+
+            <div className="container">
+                <div className="section1">
+                    <h3 className="elementName"><b>{location.name}</b></h3>
+                    <span>{location.dimension}</span>
                 </div>
-                <div>
-                    <span>Residents:</span>
-                    <h4>{location.residents?.length}</h4>
+                <div className="section3">
+                    <div className="locationType">
+                        <span>Type:</span>
+                        <h4>{location.type}</h4>
+                    </div>
+                    <div>
+                        <span>Residents:</span>
+                        <h4>{location.residents?.length}</h4>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     )
 }

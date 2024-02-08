@@ -17,21 +17,21 @@ export default function Home() {
   const data = useFetch(currentPage, charOrLocation, searchName);
   
   function handleClickPrev() {
-    if (data.info.prev != null)
+    if (data?.info.prev != null)
       setCurrentPage(currentPage - 1);
   };
 
   function handleClickNext() {
-    if (data.info.next != null)
+    if (data?.info.next != null)
       setCurrentPage(currentPage + 1);
   };
 
   let prevButton = "";
   let nextButton = "";
 
-  if (data?.info.prev == null)
+  if (data?.info?.prev == null)
     prevButton = "notVisibleButton";
-  if (data?.info.next == null)
+  if (data?.info?.next == null)
     nextButton = "notVisibleButton";
 
   return (
@@ -42,7 +42,7 @@ export default function Home() {
         <SearchBar setCharOrLocation={setCharOrLocation} setSearchName={setSearchName} setCurrentPage={setCurrentPage}/>
       </div>
       <div className="homeCard">
-        {data?.results.map((element) => (
+        {data?.results?.map((element) => (
           <div key={element.id}>
             {charOrLocation == "character" ?
               (<CharacterCards character={element} />) :

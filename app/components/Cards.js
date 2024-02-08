@@ -25,7 +25,7 @@ export function CharacterCards({ character }) {
         <>
             {clicked ? 
             (<div className="card" onClick={toggleClick}>
-                <div className="containerImage">
+                <div>
                     <img src={character.image} className="cardImage"></img>
                 </div>
 
@@ -42,19 +42,31 @@ export function CharacterCards({ character }) {
                 </div>
             </div>) : 
             <div className="cardMax" onClick={toggleClick}>
-                <div className="containerImage">
+                <div className="containerMaxImage">
                     <img src={character.image} className="cardImage"></img>
                 </div>
 
                 <div className="container">
                     <div className="section1">
-                        <h3 className="elementName"><b>{character.species}</b></h3>
+                        <h3 className="elementName"><b>{character.name}</b></h3>
                         <div className={statusIcon}></div>
-                        <span>{character.status} - {character.species}</span>
+                        <span>{character.status} - {character.species} {character.type}</span>
                     </div>
                     <div className="section2">
                         <span>Origin:</span>
                         <h4>{character.origin?.name}</h4>
+                    </div>
+                    <div className="section2">
+                        <span>Gender:</span>
+                        <h4>{character.gender}</h4>
+                    </div>
+                    <div className="section2">
+                        <span>Last known location:</span>
+                        <h4>{character.location?.name}</h4>
+                    </div>
+                    <div className="section2">
+                        <span>Episodes:</span>
+                        <h4>{character.episode.length}</h4>
                     </div>
                 </div>
             </div>
@@ -67,8 +79,7 @@ export function CharacterCards({ character }) {
 
 export function LocationCards({ location }) {
     return (
-        <div className="card">
-
+        <div className="locationCard">
             <div className="container">
                 <div className="section1">
                     <h3 className="elementName"><b>{location.name}</b></h3>

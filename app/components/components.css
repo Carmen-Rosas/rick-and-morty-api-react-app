@@ -225,3 +225,7 @@ footer h3 {
 footer a {
   margin-right: 2vmin;
 }
+
+footer img {
+  height: 6vmin;
+}

@@ -3,14 +3,13 @@ body {
   background-color: rgb(36, 39, 54);
 }
 
-.line,
-.line2 {
-  box-shadow: 0px 9px 20px 3px rgba(144, 0, 86, 0.2);
-  max-width: 100%;
+.pageContainer {
+  position: relative;
+  min-height: 100vh;
 }
 
-.line2 {
-  margin-top: 3vmin;
+.contentWrap {
+  padding-bottom: 13vmin;    
 }
 
 .homeCard {
@@ -26,12 +25,17 @@ body {
   justify-content: center;
 }
 
+.spaceBottom {
+  padding-top: 5vmin;
+}
+
 /* Next and Prev button styles */
 
 .pageButtons {
   display: flex;
   justify-content: center;
   gap: 1vmin;
+  margin-top: 2vmin;
 }
 
 button {

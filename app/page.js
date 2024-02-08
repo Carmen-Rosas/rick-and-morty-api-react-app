@@ -15,7 +15,7 @@ export default function Home() {
   const [searchName, setSearchName] = useState("");
 
   const data = useFetch(currentPage, charOrLocation, searchName);
-  
+
   function handleClickPrev() {
     if (data?.info.prev != null)
       setCurrentPage(currentPage - 1);
@@ -35,28 +35,30 @@ export default function Home() {
     nextButton = "notVisibleButton";
 
   return (
-    <>
-      <Header title="Rick and Morty" />
-      <div className="line"></div>
-      <div className="space">
-        <SearchBar setCharOrLocation={setCharOrLocation} setSearchName={setSearchName} setCurrentPage={setCurrentPage}/>
+    <div className="pageContainer">
+      <div className="contentWrap">
+        <Header title="Rick and Morty" />
+        <div className="space">
+          <SearchBar setCharOrLocation={setCharOrLocation} setSearchName={setSearchName} setCurrentPage={setCurrentPage} />
+        </div>
+        <div className="homeCard">
+          {data?.results?.map((element) => (
+            <div key={element.id}>
+              {charOrLocation == "character" ?
+                (<CharacterCards character={element} />) :
+                (<LocationCards location={element} />)
+              }
+            </div>
+          ))}
+        </div>
+        <div className="pageButtons">
+          <button className={prevButton} onClick={handleClickPrev}>Previous</button>
+          <button className={nextButton} onClick={handleClickNext}>Next</button>
+        </div>
       </div>
-      <div className="homeCard">
-        {data?.results?.map((element) => (
-          <div key={element.id}>
-            {charOrLocation == "character" ?
-              (<CharacterCards character={element} />) :
-              (<LocationCards location={element} />)
-            }
-          </div>
-        ))}
-      </div>
-      <div className="pageButtons">
-        <button className={prevButton} onClick={handleClickPrev}>Previous</button>
-        <button className={nextButton} onClick={handleClickNext}>Next</button>
-      </div>
-      <div className="line2"></div>
+      <div className="spaceBottom"></div>
       <Footer />
-    </>
+    </div>
+
   );
 }

@@ -10,6 +10,11 @@ header {
   flex-direction: column;
 }
 
+.line {
+  box-shadow: 0px 9px 20px 3px rgba(144, 0, 86, 0.2);
+  max-width: 100%;
+}
+
 .headerIcon {
   width: 5vmin;
   height: 5vmin;
@@ -199,13 +204,15 @@ div span:first-child {
 
 footer {
   height: 13vmin;
-  max-width: 100%;
+  width: 100%;
   margin-top: 5vmin;
   background-color: rgba(94, 81, 115, 0.56);
   box-shadow: 0px 7px 5px 11px rgba(94, 81, 115, 0.56);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  bottom: 0;
 }
 
 footer h3 {

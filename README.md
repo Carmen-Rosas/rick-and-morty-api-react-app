@@ -1,8 +1,10 @@
 ## Rick and Morty info cards
 This is a [Next.js](https://nextjs.org/) project that you can use to look up info about Rick and Morty characters or locations. It was made with the Rick and Morty API (https://rickandmortyapi.com/).
 If you click on the character info cards they will expand like this:
-![](https://github.com/rick-and-morty-react-app/home-expand.gif)
+<img src="https://github.com/Carmen-Rosas/rick-and-morty-api-react-app/blob/master/public/img/home-expand.gif" width="500"><img src="https://github.com/Carmen-Rosas/rick-and-morty-api-react-app/blob/master/public/img/search-expand.gif" width="500">
 And you can also change between characters or locations:
+
+<img src="https://github.com/Carmen-Rosas/rick-and-morty-api-react-app/blob/master/public/img/change.gif" width="500">
 Location info cards do not expand due to lack of information.
 
 ## Getting Started

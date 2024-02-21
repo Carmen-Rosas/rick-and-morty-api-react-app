@@ -13,7 +13,7 @@ Location info cards do not expand due to lack of information.
 ## Getting Started
 There are 2 ways to access this app, locally or via Vercel.
 ### Vercel
-Just [clicking here](https://rick-and-morty-api-react-app.vercel.app/). CSS animations of the info cards and the search box will not appear.
+Just [clicking here](https://rick-and-morty-api-react-app.vercel.app/). CSS animations of the info cards will not appear.
 ### Local
 First clone this repository, then install dependencies:
 

@@ -11,7 +11,10 @@ And you can also change between characters or locations:
 Location info cards do not expand due to lack of information.
 
 ## Getting Started
-
+There are 2 ways to access this app, locally or via Vercel.
+### Vercel
+Just [clicking here](https://rick-and-morty-api-react-app.vercel.app/). CSS animations of the info cards and the search box will not appear.
+### Local
 First clone this repository, then install dependencies:
 
 ```bash
@@ -26,4 +29,3 @@ npm run dev
 yarn dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
